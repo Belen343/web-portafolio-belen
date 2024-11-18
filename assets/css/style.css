@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    --verde-oscuro: #1E5128;
+    --verde-medio: #4E9F3D;
+    --verde-claro: #A7D129;
+    --oscuro-texto: #1A1A19;
+    --claro-texto: #ECECEC;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    font-size: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 70px;
+}
+
+/* CABECERA */
+
+.cabecera,
+.cabecera__contenedor,
+.navegacion__lista{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #FFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    font-style: normal;
+}
+
+.cabecera__contenedor{
+    gap: 10px;
+}
+
+.cabecera__logo{
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.navegacion__lista{
+    list-style: none;
+    gap: 20px;
+}
+
+.navegacion__enlace:hover {
+    color: var(--verde-medio);
+    transform: scale(1.1);
+}
+
+.cabecera__contacto {
+    display: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--verde-claro);
+    border: 2px solid var(--verde-claro);
+    box-shadow: 0 1px var(--verde-medio);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.cabecera__contacto:hover {
+    background-color: #FFF;
+    color: var(--verde-claro);
+    transform: translateY(2px);
+}
+
+@media (max-width: 824px) {
+    /* CABECERA */
+    .navegacion__lista {
+        display: none;
+    }
+
+    .cabecera__contacto {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1280px) {
+    /* CABECERA */
+    .cabecera{
+        font-size: 16px;
+    }
+    .navegacion__lista{
+        gap: 30px;
+    }
+}
