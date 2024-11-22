@@ -3,8 +3,8 @@
 *,
 *::before,
 *::after {
-    --verde-oscuro: #1E5128;
-    --verde-medio: #4E9F3D;
+    --verde-oscuro: #072C14;
+    --verde-medio: #7BA004;
     --verde-claro: #A7D129;
     --oscuro-texto: #1A1A19;
     --claro-texto: #ECECEC;
@@ -190,8 +190,63 @@ body {
 }
 
 .sobre-mi__img:hover {
-    transform: rotate(-3deg); /* Inclina la imagen 10 grados */
+    transform: rotate(-3deg);
+}
+
+/* SKILLS */
+.skills{
+    width: 100%;
+    background-color: #000;
+    padding: 1.5rem 4rem;
+    color: var(--claro-texto);
+}
+
+.skills__titulo{
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    text-shadow: 
+        0 0 10px var(--verde-claro), 
+        0 0 20px var(--verde-medio), 
+        0 0 40px var(--verde-oscuro);
+    text-align: start;
+    padding-bottom: 1.5rem;
+}
+
+.skills__lista{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills__elemento{
+    flex-grow: 1;
+}
+
+.skills__icono{
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 
+        0 0 10px var(--verde-claro),
+        0 0 20px var(--verde-medio),
+        0 0 40px var(--verde-oscuro);
+}
+
+.skills__icono:hover {
+    transform: scale(1.1);
+    box-shadow: 
+      0 0 20px var(--verde-claro), 
+      0 0 40px var(--verde-medio), 
+      0 0 60px var(--verde-oscuro);
   }
+
+.skills__nombre{
+    padding-top: 1rem;
+    color: var(--verde-claro);
+}
 
 @media (max-width: 824px) {
     /* CABECERA */
@@ -250,6 +305,21 @@ body {
         width: 10rem;
         padding-left: 2rem;
     }
+
+    /* SKILLS */
+    .skills__titulo{
+        font-size: 12px;
+    }
+
+    .skills__icono{
+        height: 32px;
+        width: 32px;
+    }
+    
+    .skills__nombre{
+        font-size: 10px;
+    }
+    
 }
 
 @media (min-width: 1280px) {
@@ -311,4 +381,21 @@ body {
         width: 20rem;
     }
 
+    /* SKILLS */
+    .skills{
+        padding: 1.5rem 5rem;
+    }
+
+    .skills__titulo{
+        font-size: 20px;
+    }
+
+    .skills__icono{
+        height: 55px;
+        width: 55px;
+    }
+    
+    .skills__nombre{
+        font-size: 16px;
+    }
 }
