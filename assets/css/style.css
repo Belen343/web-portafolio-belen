@@ -217,12 +217,12 @@ body {
 
 /* FORMACIÓN */
 .formacion{
-    background-image: url(../img/fondo-formacion.png);
+    background-image: url(../img/fondo-formacion1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 85vh;
+    height: auto;
     padding: 6rem 3.625rem;
 }
 .sobre-mi__titulo,
@@ -385,6 +385,77 @@ body {
     transform: translateY(2px);
 }
 
+/* CONTACTO */
+.contacto {
+    background-color: #000;
+    color: #FFF;
+    padding: 3rem 3.625rem;
+}
+.contacto__contenedor {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contacto__titulo {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    text-shadow: 
+        0 0 10px var(--verde-claro), 
+        0 0 20px var(--verde-medio), 
+        0 0 40px var(--verde-oscuro);
+    margin-bottom: 1rem;
+}
+.contacto__texto {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: var(--claro-texto);
+    margin-bottom: 2rem;
+}
+.contacto__campo {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    margin-bottom: 20px;
+    border: 1px solid var(--claro-texto);
+    border-radius: 5px;
+    background-color: var(--oscuro-texto);
+    color: #FFF;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.contacto__campo:focus {
+    border-color: var(--verde-claro);
+}
+.contacto__boton {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    background-color: var(--verde-medio);
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contacto__boton:hover {
+    background-color: var(--verde-claro);
+}
+.contacto__mensaje {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-shadow: 
+        0 0 10px var(--verde-claro), 
+        0 0 20px var(--verde-medio), 
+        0 0 40px var(--verde-oscuro);
+}
+
+
 @media (max-width: 767px) {
     body {
         padding-top: 50px;
@@ -433,9 +504,6 @@ body {
 
     /* FORMACIÓN */
     .formacion{
-        background-image: url(../img/fondo-formacion2.0.png);
-        width: 100%;
-        height: 100%;
         padding: 6rem 3.625rem;
     }
     .formacion__lista{
@@ -522,6 +590,24 @@ body {
     .proyecto__enlaces{
         font-size: 11px;
     }
+
+    /* CONTACTO */
+    .contacto {
+        padding: 3rem 3.625rem;
+    }
+    .contacto__contenedor {
+        padding: 0;
+    }
+    .contacto__titulo {
+        font-size: 12px;
+    }
+    .contacto__texto {
+        font-size: 10px;
+    }
+    .contacto__campo, .contacto__boton {
+        padding: .75rem 1rem;
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -592,7 +678,6 @@ body {
     /* FORMACIÓN */
     .formacion{
         padding: 6rem 6rem;
-        height: 90vh;
     }
     .formacion__titulo{
         font-size: 20px;
@@ -635,6 +720,21 @@ body {
         font-size: 15px;
     }
     .proyecto__enlaces{
+        font-size: 14px;
+    }
+
+     /* CONTACTO */
+     .contacto {
+        padding: 6rem 6rem;
+    }
+    .contacto__titulo {
+        font-size: 20px;
+    }
+    .contacto__texto {
+        font-size: 16px;
+    }
+    .contacto__campo, .contacto__boton {
+        padding: 1.25rem 1.5rem;
         font-size: 14px;
     }
 }
