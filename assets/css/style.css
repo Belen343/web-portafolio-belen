@@ -442,6 +442,9 @@ body {
 .contacto__boton:hover {
     background-color: var(--verde-claro);
 }
+.contacto__boton:disabled{
+    background-color: #1A1A19;
+}
 .contacto__mensaje {
     margin-top: 1rem;
     text-align: center;
